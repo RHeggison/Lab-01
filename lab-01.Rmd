@@ -167,11 +167,11 @@ visitors %>%
 _Perform the same calculation for the 2021 admissions data._
 
 ```{r Ex_h}
-#visitors %>% 
-#  ______(
-#    __________,
-#    __________
-#  )
+visitors %>% 
+ summarise(
+    mean_2021 = mean(n_2021, na.rm = TRUE),
+    med_2021 = median(n_2021, na.rm = TRUE)
+  )
 ```
 
 All values in the output are `NA`!
@@ -180,7 +180,7 @@ All values in the output are `NA`!
 
 _What does `NA` stand for and why are you getting this as your answer to the previous question._
 
-**Write your answer here**
+**There are NA values in the 2021 dataset, so the calculated values return as NA**
 
 
 
@@ -211,7 +211,7 @@ visitors %>%
 
 _Observe in question 6 that the mean statistics across all settings are much larger than the corresponding median statistics. Discuss in your group what this suggests about the data._
 
-**Write your answer here**
+**The data is positively skewed.**
 
 
 
